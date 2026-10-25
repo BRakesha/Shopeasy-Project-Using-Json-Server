@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.header-part{
+    border: 1px solid black;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    background-color: #BFDDF0;
+    .logo,.search,.btns{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo{
+        width: 25%;
+        img{
+            width: 50%;
+            height: 75%;
+            border-radius: 10px;
+        }
+    }
+    .search{
+        width: 50%;
+        input,button{
+            font-size: large;
+            padding: 2vh 1vw;
+            border: none;
+        }
+        input{
+            width: 30vw;
+            border-radius: 10vh 0 0 10vh;
+        }
+        button{
+            border-radius: 0 10vh 10vh 0;
+            cursor: pointer;
+            &:hover{
+                background-color: gray;
+                color: white;
+            }
+        }
+    }
+    .btns{
+        width: 25%;
+        button{
+            border: none;
+            font-size: large;
+            padding: 1.5vh 1.3vw;
+            margin: 0 1vw;
+            cursor: pointer;
+            border-radius: 5px;
+            &:hover{
+                color: white;
+            }
+        }
+        .login{
+            border: 1px solid blue;
+            color: blue;
+            &:hover{
+                background-color: blue;
+            }
+        }
+        .cart{
+            border: 1px solid green;
+            color: green;
+            &:hover{
+                background-color: green;
+            }
+        }
+    }
+
+}
+/* Design For Landing Page */
+/* if your working with flex u have to give height,width in px */
+
+.products{
+    
+        .category{
+            width: 80%;
+            margin: auto;
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 15vh;
+
+                li{
+                    list-style: none;
+                    button{
+                        padding: 10px;
+                        border-radius: 6px;
+                        background-color: #88BDA4;
+                        color: white;
+                        font-weight: bold;
+                        transition: .3s;
+
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    .container{
+        margin: 5vh auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 5vh;
+        column-gap: 5vw;
+        text-align: center;
+
+        .card{
+            border: 1px solid black;
+            width: 260px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #F9F8F6;
+            transition: .3s;
+            &:hover{
+                box-shadow: 2px 5px 8px black;
+                transform: translateY(-5px);
+            }
+        }
+        .image{
+            text-align: center;
+            img{
+                width: 50%;
+                height: 150px;
+            }
+        }
+        .title,.price{
+            font-weight: bold;
+            font-size: large;
+            margin: 2vh 0;
+        }
+        .title{
+            font-size: small;
+        }
+        .price{
+            span{
+                border: 1px solid black;
+                padding: 5px;
+                border-radius: 8px;
+                background-color: #CBE4DE;
+            }
+        }
+        .btn{
+            overflow: hidden;
+
+            button{
+                width: 95%;
+                padding: 12px;
+                border-radius: 15px;
+                background-color: #3DC2EC;
+                transition: .3s;
+                color: white;
+                &:hover{
+                    background-color: #4ED7F1;
+                    color: white;
+                    transform: scale(.9);
+                }
+            }
+        }
+    }
+}
+.viewmore{
+    .container{
+        padding: 15px;
+        width: 80%;
+        margin: 10vh auto;
+        display: flex;
+        .left,.rigth{
+            width: 50%;
+            display: flex;
+            justify-content: center; 
+        }
+        .left{
+            align-items: center;
+            text-align: center;
+            img{
+                height: 80%;
+                width: 60%;
+            }
+        }
+        .rigth{
+            flex-direction: column;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: small;
+            text-transform: capitalize;
+            text-align: start;
+            p{
+                line-height: 2rem;
+                text-align: justify;
+
+            }
+            span{
+                color: #BFDDF0;
+                font-size: large;
+                text-transform: uppercase;
+                margin-right: .8vw;
+            }
+            .btns{
+                display: flex;
+                justify-content: space-around;
+                button{
+                    padding: 10px;
+                    border-radius: 10px;
+                    width: 150px;
+                    background-color: #FF8282;
+                    color: white;
+                    font-weight: bold;
+                    transition: .3s;
+                    &:hover{
+                        background-color: #FF6363;
+                        transform: translateX(-5px);
+                    }
+                }
+            }
+        }
+    }
+}
+.cart-container {
+  width: 90%;
+  margin: 30px auto;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    thead {
+      background: #333;
+      color: white;
+
+      th {
+        padding: 15px;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #ddd;
+        transition: 0.3s;
+
+        &:hover {
+          background: #f5f5f5;
+        }
+
+        td {
+          padding: 15px;
+          text-align: center;
+
+          img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+          }
+          button{
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+}
+        }
+      }
+    }
+  }
+
+  .total {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+.login-container {
+    height: 100vh;
+    width:100% ;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        background: linear-gradient(to right, #ff6b6b, #6c63ff);
+        color: transparent;
+        background-clip: text;
+        padding: 25px
+
+    }
+
+    .login-box {
+        width: 350px;
+        padding: 30px;
+        background: white;
+        margin:10vh auto;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        text-align: center;
+
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            input {
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 16px;
+
+                &:focus {
+                    outline: none;
+                    border-color: #6c63ff;
+                }
+            }
+
+            button {
+                padding: 12px;
+                border: none;
+                border-radius: 8px;
+                background: #6c63ff;
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    background: #574fd6;
+                }
+            }
+
+            h3 {
+                color: red;
+                min-height: 20px;
+                margin: 0;
+            }
+        }
+    }
+}
